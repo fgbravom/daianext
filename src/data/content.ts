@@ -33,8 +33,8 @@ export const products: Product[] = [
     description: 'Sistema especializado en gestión de calidad para la industria frutícola con control integral de procesos.',
     features: [
       'Control de procesos de calidad',
-      'Gestión de certificaciones',
-      'Cumplimiento normativo automatizado',
+      'Recepción, producto terminado, consolidación de despacho',
+      'Envio de reportes automatizado',
       'Dashboards de calidad en tiempo real'
     ],
     image: '/images/daia-calidad.png',
@@ -45,7 +45,7 @@ export const products: Product[] = [
     name: 'Daia Agent',
     description: 'Intermediario que conecta tu ERP con las líneas de empaquetado y calibración mediante APIs genéricas. Elimina ingresos manuales y garantiza trazabilidad total en tiempo real.',
     features: [
-      'Integración con clasificadores Tomra, MAF, Unitec y Aweta',
+      'Integración con clasificadores Tomra/Compac, MAF, Unitec y más.',
       'Control de salidas PLC en tiempo real',
       'Sistema de etiquetado automático ZPL',
       'Gestión de paletizado y trazabilidad'

@@ -19,9 +19,8 @@ export default function Clients() {
             Nuestros <span className="text-[#0057B8]">clientes</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Ellos han confiado sus procesos productivos y de exportación a Daia
-            Systems, llegando a manejar entre 3 a 12 millones de kg de fruta por
-            temporada.
+            Ellos han confiado sus procesos productivos a Daia Systems. 
+            Cada año, nuestro sistema asegura la trazabilidad de millones de cajas de fruta fresca y gestiona el análisis de cientos de millones de eventos productivos para entregar a nuestros clientes los datos que necesitan para manejar sus negocios.
           </p>
         </motion.div>
 

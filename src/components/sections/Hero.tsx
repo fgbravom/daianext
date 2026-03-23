@@ -149,15 +149,15 @@ export default function Hero() {
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-[#0057B8]">10+</div>
-              <div className="text-sm text-gray-600">Clientes activos</div>
+              <div className="text-sm text-gray-600">Plantas de procesos activas</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#0057B8]">1000M+</div>
-              <div className="text-sm text-gray-600">Kg procesados</div>
+              <div className="text-3xl font-bold text-[#0057B8]">Total</div>
+              <div className="text-sm text-gray-600">Integración con tu maquinaria</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-[#0057B8]">100%</div>
-              <div className="text-sm text-gray-600">Tiempo real</div>
+              <div className="text-3xl font-bold text-[#0057B8]">24/7</div>
+              <div className="text-sm text-gray-600">Soporte adaptable</div>
             </div>
           </motion.div>
         </div>
