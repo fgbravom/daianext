@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { clients } from '@/data/content'
 import Button from '@/components/ui/Button'
+import { TrendingDown, Zap, TrendingUp } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Clientes - Empresas que confían en Daia Systems',
@@ -16,13 +17,42 @@ export default function ClientesPage() {
     { number: '99.9%', label: 'Uptime del Sistema' }
   ]
 
+  const beneficios = [
+    {
+      icon: TrendingDown,
+      title: 'Menos Errores',
+      description: 'Reducción significativa en errores de inventario y trazabilidad'
+    },
+    {
+      icon: Zap,
+      title: 'Mayor Velocidad',
+      description: 'Procesos más ágiles desde recepción hasta exportación'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Mejor Control',
+      description: 'Visibilidad completa y toma de decisiones en tiempo real'
+    }
+  ]
+
+  const industrias = [
+    { emoji: '🍒', label: 'Cerezas' },
+    { emoji: '🍎', label: 'Manzanas' },
+    { emoji: '🫐', label: 'Ciruelas' },
+    { emoji: '🍐', label: 'Peras' },
+    { emoji: '🍇', label: 'Uvas' },
+    { emoji: '🍊', label: 'Naranjas' },
+    { emoji: '🍋', label: 'Limones' },
+    { emoji: '🥑', label: 'Paltas' },
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Nuestros Clientes
+            Trazabilidad sin fronteras
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Empresas líderes de la industria frutícola que han transformado sus operaciones
@@ -31,11 +61,11 @@ export default function ClientesPage() {
         </div>
 
         {/* Stats Section */}
-        <section className="grid md:grid-cols-3 gap-8 mb-16">
+        <section className="grid md:grid-cols-3 gap-6 mb-16">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-3xl font-bold text-[#0057B8] mb-2">{stat.number}</div>
-              <div className="text-gray-600">{stat.label}</div>
+            <div key={index} className="text-center p-8 bg-white rounded-xl border border-gray-100 shadow-md">
+              <div className="text-4xl font-bold text-[#0057B8] mb-2">{stat.number}</div>
+              <div className="text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </section>
@@ -45,11 +75,14 @@ export default function ClientesPage() {
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Empresas que confían en nosotros
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {clients.map((client) => (
-              <div key={client.id} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center">
+              <div
+                key={client.id}
+                className="bg-white p-8 rounded-xl border border-gray-100 shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex items-center justify-center"
+              >
                 <div className="text-center">
-                  <div className="h-24 flex items-center justify-center mb-4">
+                  <div className="h-24 flex items-center justify-center mb-3">
                     <Image
                       src={client.logo}
                       alt={`${client.name} logo`}
@@ -58,7 +91,7 @@ export default function ClientesPage() {
                       className="max-h-20 max-w-32 object-contain transition-all duration-300"
                     />
                   </div>
-                  <h3 className="font-semibold text-gray-900">{client.name}</h3>
+                  <h3 className="font-semibold text-gray-700 text-sm">{client.name}</h3>
                 </div>
               </div>
             ))}
@@ -73,66 +106,34 @@ export default function ClientesPage() {
           <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-12">
             Nuestro foco principal está en <strong>cerezas, manzanas, ciruelas y uvas</strong>, donde Daia ERP ha sido especialmente diseñado y optimizado para gestionar los desafíos únicos de estos cultivos. También hemos trabajado exitosamente con peras, cítricos y paltas, logrando resultados excepcionales en la gestión y trazabilidad de cada especie.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍒</div>
-              <h3 className="font-semibold text-gray-900">Cerezas</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍎</div>
-              <h3 className="font-semibold text-gray-900">Manzanas</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🫐</div>
-              <h3 className="font-semibold text-gray-900">Ciruelas</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍐</div>
-              <h3 className="font-semibold text-gray-900">Peras</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍇</div>
-              <h3 className="font-semibold text-gray-900">Uvas</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍊</div>
-              <h3 className="font-semibold text-gray-900">Naranjas</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🍋</div>
-              <h3 className="font-semibold text-gray-900">Limones</h3>
-            </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-              <div className="text-5xl mb-3">🥑</div>
-              <h3 className="font-semibold text-gray-900">Paltas</h3>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {industrias.map((item, index) => (
+              <div key={index} className="text-center p-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-100 transition-all duration-200">
+                <div className="text-4xl mb-3">{item.emoji}</div>
+                <h3 className="font-semibold text-gray-900 text-sm">{item.label}</h3>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* Success Stories */}
-        <section className="bg-gradient-to-r from-green-600 to-green-800 rounded-xl p-8 md:p-12 text-white mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Beneficios Comprobados</h2>
-            <p className="text-xl opacity-90">
+        {/* Beneficios Comprobados */}
+        <section className="bg-gradient-to-r from-[#0057B8] to-[#003865] rounded-xl p-8 md:p-12 text-white mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-3">Beneficios Comprobados</h2>
+            <p className="text-lg opacity-90">
               Mejoras tangibles que nuestros clientes experimentan día a día
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl mb-3">✓</div>
-              <div className="text-xl font-semibold mb-2">Menos Errores</div>
-              <div className="text-base opacity-90">Reducción significativa en errores de inventario y trazabilidad</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">⚡</div>
-              <div className="text-xl font-semibold mb-2">Mayor Velocidad</div>
-              <div className="text-base opacity-90">Procesos más ágiles desde recepción hasta exportación</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">📈</div>
-              <div className="text-xl font-semibold mb-2">Mejor Control</div>
-              <div className="text-base opacity-90">Visibilidad completa y toma de decisiones en tiempo real</div>
-            </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {beneficios.map((b, index) => (
+              <div key={index} className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-colors duration-200">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <b.icon className="text-white" size={22} />
+                </div>
+                <div className="text-lg font-semibold mb-2">{b.title}</div>
+                <div className="text-sm opacity-90 leading-relaxed">{b.description}</div>
+              </div>
+            ))}
           </div>
         </section>
 

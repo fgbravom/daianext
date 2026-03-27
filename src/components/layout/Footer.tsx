@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Github, Linkedin, Youtube } from 'lucide-react'
+import { Linkedin, Youtube } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -119,15 +119,7 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex space-x-4 mt-4 justify-center md:justify-start">
-              <a
-                href="https://github.com/Daia-Systems-SPA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a
+<a
                 href="https://www.linkedin.com/company/daia-systems-spa/"
                 target="_blank"
                 rel="noopener noreferrer"
