@@ -1,3 +1,5 @@
+import { type LucideIcon } from 'lucide-react'
+
 export interface Product {
   id: string
   name: string
@@ -18,7 +20,7 @@ export interface Value {
   id: string
   title: string
   description: string
-  icon: string
+  icon: LucideIcon
 }
 
 export interface ContactForm {

@@ -193,6 +193,7 @@ function ContactoForm() {
                     <option value="daia-hub">Daia HUB</option>
                     <option value="daia-calidad">Daia Calidad</option>
                     <option value="daia-agent">Daia Agent</option>
+                    <option value="daia-instruments">Daia Instruments</option>
                     <option value="ambos">Varios productos</option>
                     <option value="consultoria">Consultoría</option>
                     <option value="otro">Otro</option>

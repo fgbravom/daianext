@@ -105,18 +105,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-black text-center max-w-4xl leading-relaxed"
           >
-            Sistemas que se integran para obtener la trazabilidad completa de la fruta, desde la
-            {' '}<strong className="text-black">recepción</strong>{' '} en la planta,
-            hasta su {' '}<strong className="text-black">exportación</strong>.{' '}
-            ERP, HUB, AGENTE para líneas de proceso, integraciones con otros sistemas, integración con maquinaria, sensores de temperatura y más.
+            Todo lo que necesitas para trazar tu fruta desde la {' '}<strong className="text-black">recepción</strong>{' '} en la planta hasta que sale al {' '}<strong className="text-black">mundo</strong>. ERP, HUB, AGENTE para líneas de proceso, integraciones con sistemas externos, maquinaria, sensores y más.
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-black text-center max-w-4xl leading-relaxed"
-          >Tu fruta, bajo control.</motion.p>
-
           {/* Botones */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,7 +147,7 @@ export default function Hero() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-[#0057B8]">24/7</div>
-              <div className="text-sm text-gray-600">Soporte adaptable</div>
+              <div className="text-sm text-gray-600">Soporte cuando lo necesites</div>
             </div>
           </motion.div>
         </div>

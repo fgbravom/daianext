@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { values } from '@/data/content'
+import BenefitCard from '@/components/ui/BenefitCard'
 
 export const metadata: Metadata = {
   title: 'Empresa - Sobre Daia Systems | Líderes en tecnología frutícola',
@@ -52,11 +53,12 @@ export default function EmpresaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
-              <div key={value.id} className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
+              <BenefitCard
+                key={value.id}
+                title={value.title}
+                description={value.description}
+                icon={value.icon}
+              />
             ))}
           </div>
         </section>

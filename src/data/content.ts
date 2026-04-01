@@ -1,3 +1,4 @@
+import { Target, Shield, Search, Zap } from 'lucide-react'
 import { Product, Client, Value } from '@/types'
 
 export const products: Product[] = [
@@ -85,25 +86,25 @@ export const values: Value[] = [
     id: 'simplicity',
     title: 'Simplicidad',
     description: 'Cada producto está diseñado para maximizar la comodidad y facilidad de uso, mejorando la productividad.',
-    icon: '🎯'
+    icon: Target
   },
   {
     id: 'responsibility',
     title: 'Responsabilidad',
     description: 'Somos responsables en cada paso, ofreciendo soluciones fiables y duraderas que impulsen tu éxito.',
-    icon: '🛡️'
+    icon: Shield
   },
   {
     id: 'transparency',
     title: 'Transparencia',
     description: 'Utilizamos tecnología de punta para ofrecerte herramientas transparentes con datos precisos en tiempo real.',
-    icon: '🔍'
+    icon: Search
   },
   {
     id: 'efficiency',
     title: 'Eficiencia',
     description: 'Conocemos los procesos productivos y sabemos qué información necesitas y cuándo la necesitas.',
-    icon: '⚡'
+    icon: Zap
   }
 ]
 
