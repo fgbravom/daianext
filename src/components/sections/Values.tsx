@@ -33,18 +33,16 @@ export default function Values() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-white border border-gray-200 rounded-xl p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-blue-200">
-                <div className="text-center">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {value.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {value.description}
-                  </p>
+              <div className="bg-gradient-to-br from-[#0057B8] to-[#003865] rounded-xl p-6 h-full shadow-xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-200">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/30 transition-colors duration-200">
+                  <value.icon className="text-white" size={22} />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-blue-100 text-sm leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             </motion.div>
           ))}
