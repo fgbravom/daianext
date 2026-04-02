@@ -100,10 +100,13 @@ export default function Products() {
                   <div className="flex justify-center lg:justify-start">
                     <Link
                       href={`/productos/${product.id}`}
-                      className="inline-flex items-center gap-2 bg-[#0057B8] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#003865] transition-colors duration-200 group"
+                      className="relative overflow-hidden inline-flex items-center gap-2 bg-gradient-to-r from-[#0057B8] to-[#003865] hover:from-[#003865] hover:to-[#0057B8] text-white px-6 py-3 rounded-lg font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
                     >
-                      Ver producto
-                      <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                      <span className="relative z-10 flex items-center gap-2">
+                        Ver producto
+                        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                      </span>
+                      <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
                     </Link>
                   </div>
                 </div>

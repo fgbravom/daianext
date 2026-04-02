@@ -105,7 +105,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-black text-center max-w-4xl leading-relaxed"
           >
-            Todo lo que necesitas para trazar tu fruta desde la {' '}<strong className="text-black">recepción</strong>{' '} en la planta hasta que sale al {' '}<strong className="text-black">mundo</strong>. ERP, HUB, AGENTE para líneas de proceso, integraciones con sistemas externos, maquinaria, sensores y más.
+            Todo lo que necesitas para trazar tu fruta desde la {' '}<strong className="text-black">recepción</strong>{' '} en la planta hasta que sale al {' '}<strong className="text-black">mundo</strong>. ERP, HUB, AGENTE para líneas de proceso, integraciones con sistemas externos, maquinaria, sensores inteligentes y más.
           </motion.p>
           {/* Botones */}
           <motion.div

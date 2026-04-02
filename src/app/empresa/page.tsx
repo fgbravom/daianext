@@ -10,47 +10,45 @@ export const metadata: Metadata = {
 export default function EmpresaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        {/* Hero Section */}
-        <section id="about" className="text-center mb-20">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Sobre Daia Systems
+
+      {/* Hero — centrado, consistente con el resto del sitio */}
+      <section className="pt-20 pb-8 px-4 text-center">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-[#0057B8] text-xs font-bold uppercase tracking-widest mb-4">Sobre nosotros</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight text-gray-900">
+            Tecnología hecha para la fruta
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-6">
-            Daia Systems SpA se creó para responder a las necesidades tecnológicas específicas de las plantas frutícolas.
-            Estamos convencidos que hoy en día, los sistemas de información son una parte clave de los procesos productivos
-            de cada empresa y el buen diseño de estos, tal como su correcto manejo es esencial a su éxito.
+          <p className="text-2xl italic text-[#0057B8] font-medium mb-6">&ldquo;Simplemente, eficiente&rdquo;</p>
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            Daia Systems se creó para responder a las necesidades tecnológicas específicas de las plantas
+            frutícolas de exportación.
           </p>
-          <p className="text-xl italic text-[#0057B8] font-medium max-w-2xl mx-auto">
-            &ldquo;Simplemente, eficiente&rdquo;
-          </p>
-        </section>
+        </div>
+      </section>
 
-        {/* About Section */}
-        <section className="max-w-4xl mx-auto mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Nuestra empresa</h2>
-          <div className="space-y-6 text-gray-700 text-lg">
-            <p>
-              Gracias a nuestra <strong>experiencia en este rubro</strong>, creamos herramientas digitales
-              para modernizar y agilizar la gestión de los sitios de producción.
+      {/* Cuerpo */}
+      <section className="pt-4 pb-16 px-4">
+        <div className="mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Nacimos dentro de la industria frutícola, no desde afuera mirando hacia adentro. <strong>Conocemos los tiempos de temporada</strong>, <strong>la presión del despacho</strong>, <strong>los requerimientos de exportación</strong> y lo que significa perder trazabilidad en medio de una línea de proceso.
             </p>
-            <p>
-              Nuestra finalidad es ayudarles a manejar las diferentes facetas de sus negocios mediante{' '}
-              <strong>herramientas flexibles y fácil de utilizar</strong>, entregándole informaciones claves
-              para acompañarle en su toma de decisión y lograr sus objetivos.
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Por esto cada herramienta que desarrollamos responde a <strong>problemas reales de plantas reales</strong>. No adaptamos software genérico — construimos desde la operación hacia arriba, para que el sistema se ajuste a tu trabajo y no al revés.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Values Section */}
-        <section id="values" className="mb-20">
+      {/* Values — título centrado con eyebrow label */}
+      <section id="values" className="py-16 px-4">
+        <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Nuestros Valores</h2>
-            <p className="text-xl text-gray-600">
-              Los principios que guían cada decisión y desarrollo en Daia Systems
-            </p>
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-4">
+              Nuestra cultura
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Nuestros Valores</h2>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
               <BenefitCard
@@ -61,10 +59,9 @@ export default function EmpresaPage() {
               />
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-
-      </div>
     </div>
   )
 }
