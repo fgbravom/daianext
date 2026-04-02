@@ -68,7 +68,7 @@ export default function ProductosPage() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
                     <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
                     <div className="flex-1 mx-2 bg-white rounded border border-gray-200 px-2 py-0.5 text-[10px] text-gray-400 truncate">
-                      app.daia.cl/{product.id}
+                      daia.cl/{product.id}
                     </div>
                   </div>
                   <div className="relative aspect-video bg-[#EEF3FA]">

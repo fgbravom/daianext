@@ -41,27 +41,33 @@ export default function Products() {
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                 <Link href={`/productos/${product.id}`} className="group block">
                   <div className="bg-white rounded-2xl shadow-lg overflow-hidden transition-shadow duration-300 group-hover:shadow-xl">
-                    <div className="aspect-video bg-gradient-to-br from-[#0057B8]/5 to-[#003865]/5 flex items-center justify-center p-8 relative">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Image
-                          src={
-                            product.id === 'daia-erp'
-                              ? '/daiaerp.png'
-                              : product.id === 'daia-hub'
-                              ? '/daiahub.png'
-                              : product.id === 'daia-agent'
-                              ? '/daiaagent/operador_con_datos.png'
-                              : product.id === 'daia-calidad'
-                              ? '/daiacalidad.png'
-                              : product.image ?? '/daiacalidad.png'
-                          }
-                          alt={`${product.name} Screenshot`}
-                          width={500}
-                          height={350}
-                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                        />
+                    {/* Browser mockup */}
+                    <div className="bg-gray-100 border-b border-gray-200 px-3 py-2 flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
+                      <div className="flex-1 mx-2 bg-white rounded border border-gray-200 px-2 py-0.5 text-[10px] text-gray-400 truncate">
+                        daia.cl/{product.id}
                       </div>
-                      <div className="absolute inset-0 bg-[#0057B8]/0 group-hover:bg-[#0057B8]/5 transition-colors duration-300 rounded-2xl" />
+                    </div>
+                    <div className="aspect-video bg-[#EEF3FA] flex items-center justify-center relative">
+                      <Image
+                        src={
+                          product.id === 'daia-erp'
+                            ? '/daiaerp.png'
+                            : product.id === 'daia-hub'
+                            ? '/daiahub.png'
+                            : product.id === 'daia-agent'
+                            ? '/daiaagent/operador_con_datos.png'
+                            : product.id === 'daia-calidad'
+                            ? '/daiacalidad.png'
+                            : product.image ?? '/daiacalidad.png'
+                        }
+                        alt={`${product.name} Screenshot`}
+                        width={500}
+                        height={350}
+                        className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
                     </div>
                   </div>
                 </Link>
