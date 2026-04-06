@@ -107,6 +107,31 @@ export default function ClientesPage() {
         </div>
       </section>
 
+      {/* Partners */}
+      <section className="py-10 px-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-8">
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-4">
+              Partners tecnológicos
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Trabajamos junto a los mejores
+            </h2>
+          </div>
+          <div className="flex justify-center">
+            <div className="bg-white rounded-xl p-6 h-32 w-48 flex items-center justify-center border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+              <Image
+                src="/clientes/logo-tomra.avif"
+                alt="Tomra logo"
+                width={120}
+                height={72}
+                className="max-h-16 max-w-28 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Industrias */}
       <section className="py-16 px-4">
         <div className="mx-auto max-w-4xl text-center">
