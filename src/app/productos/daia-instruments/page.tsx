@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Zap, MessageCircle, Cloud, MonitorPlay, Lock, Settings2, BarChart2, ScanLine, CheckCircle2 } from 'lucide-react'
+import { Zap, MessageCircle, Cloud, MonitorPlay, Lock, Settings2, BarChart2, ScanLine, CheckCircle2 } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import FeatureCard from '@/components/ui/FeatureCard'
 import BenefitCard from '@/components/ui/BenefitCard'
 import ProductSlider from '@/components/ui/ProductSlider'
 
@@ -11,7 +13,18 @@ export const metadata: Metadata = {
 }
 
 export default function DaiaInstrumentsPage() {
-  const differentials = [
+  const features = [
+    'Monitoreo de temperatura en tiempo real desde cualquier dispositivo',
+    'Alarmas automáticas por WhatsApp sin apps adicionales',
+    'Trazabilidad de folios con historial de entrada y salida',
+    'Exportación de datos históricos a CSV',
+    'Perfiles de usuario con niveles de acceso diferenciados',
+    'Configuración de umbrales y contactos de alerta por sensor',
+    'Gráficos integrados para detectar anomalías de temperatura',
+    'Sensores inalámbricos sin instalaciones invasivas',
+  ]
+
+  const benefits = [
     {
       icon: Zap,
       title: 'Instalación rápida y de bajo costo',
@@ -24,7 +37,7 @@ export default function DaiaInstrumentsPage() {
     },
     {
       icon: Cloud,
-      title: 'Una plataforma cloud siempre disponible',
+      title: 'Plataforma cloud siempre disponible',
       description: 'Accede a todos tus sensores desde cualquier dispositivo, en cualquier momento. Una plataforma profesional disponible desde tu computador o celular.'
     }
   ]
@@ -116,15 +129,6 @@ export default function DaiaInstrumentsPage() {
           <span className="text-[#0057B8] font-medium">Daia Instruments</span>
         </nav>
 
-        {/* Back button */}
-        <Link
-          href="/productos"
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#0057B8] transition-colors mb-10"
-        >
-          <ArrowLeft size={18} />
-          <span className="text-sm">Volver a productos</span>
-        </Link>
-
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
@@ -138,8 +142,8 @@ export default function DaiaInstrumentsPage() {
               Termometría con alarmas en tiempo real
             </p>
             <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-              Plataforma de monitoreo IoT con sensores inalámbricos, diseñada específicamente
-              para las necesidades de la agroindustria.
+              Plataforma de monitoreo IoT con sensores inalámbricos diseñada para la agroindustria.
+              Sin cableado, sin apps adicionales, con alertas directas a WhatsApp.
             </p>
             <Link href="/contacto?interes=daia-instruments">
               <Button variant="primary" size="lg">
@@ -147,34 +151,29 @@ export default function DaiaInstrumentsPage() {
               </Button>
             </Link>
           </div>
-          <div className="bg-gradient-to-br from-[#0057B8] to-[#003865] rounded-2xl p-8 text-white shadow-2xl">
-            <h2 className="text-xl font-bold mb-4">¿Por qué Daia Instruments?</h2>
-            <div className="space-y-4 text-sm leading-relaxed opacity-90">
-              <p>
-                Daia Instruments nace para complementar y potenciar la oferta actual del mercado en
-                soluciones IoT aplicadas al control de temperatura y recursos estratégicos.
-              </p>
-              <p>
-                Ponemos a disposición de nuestros clientes una plataforma de monitoreo con sensores
-                inalámbricos, fácil de usar y diseñada específicamente para las necesidades de la agroindustria.
-              </p>
-              <p>
-                Sin necesidad de cableado ni instalaciones invasivas, nuestra solución permite integrar
-                alarmas inteligentes, automatizar controles y sumar funcionalidades avanzadas a sistemas
-                existentes de termometría y gestión de recursos críticos.
-              </p>
+          <div className="relative">
+            <div className="aspect-video bg-gray-50 rounded-2xl overflow-hidden shadow-md border border-gray-200">
+              <Image
+                src="/daiainstruments/Imagen2.png"
+                alt="Daia Instruments - Tablero central de sensores"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
 
-        {/* Differentials Section */}
+        {/* Features Section */}
         <section className="mb-16">
-          <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Diferenciales</span>
-          <h2 className="text-2xl font-bold text-gray-900 mb-7">Nuestras diferencias</h2>
-          <div className="grid md:grid-cols-3 gap-5">
-            {differentials.map((item, index) => (
-              <BenefitCard key={index} icon={item.icon} title={item.title} description={item.description} />
-            ))}
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Funcionalidades</span>
+            <h2 className="text-2xl font-bold text-gray-900 mb-7">Características principales</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {features.map((feature, index) => (
+                <FeatureCard key={index} text={feature} />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -188,10 +187,21 @@ export default function DaiaInstrumentsPage() {
           </div>
         </section>
 
-        {/* Funcionalidades Section */}
+        {/* Benefits Section */}
+        <section className="mb-16">
+          <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Por qué elegirnos</span>
+          <h2 className="text-2xl font-bold text-gray-900 mb-7">Beneficios para tu operación</h2>
+          <div className="grid md:grid-cols-3 gap-5">
+            {benefits.map((benefit, index) => (
+              <BenefitCard key={index} icon={benefit.icon} title={benefit.title} description={benefit.description} />
+            ))}
+          </div>
+        </section>
+
+        {/* Funcionalidades detalladas */}
         <section className="mb-16">
           <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
-            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Funcionalidades</span>
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Módulos</span>
             <h2 className="text-2xl font-bold text-gray-900 mb-7">Todo lo que incluye</h2>
             <div className="grid md:grid-cols-2 gap-5">
               {funcionalidades.map((func, index) => (
@@ -240,10 +250,9 @@ export default function DaiaInstrumentsPage() {
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-[#0057B8] to-[#003865] rounded-2xl p-8 md:p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para monitorear tu cadena de frío?</h2>
+          <h2 className="text-3xl font-bold mb-4">¿Sabes exactamente qué temperatura tiene tu cámara ahora mismo?</h2>
           <p className="text-lg mb-8 opacity-80">
-            Ayudamos a las empresas a optimizar sus procesos, reducir riesgos operativos
-            y tomar decisiones basadas en datos en tiempo real.
+            Instala Daia Instruments en minutos y recibe alertas en WhatsApp antes de que un problema afecte tu producción.
           </p>
           <Link href="/contacto?interes=daia-instruments">
             <Button variant="white" size="lg">

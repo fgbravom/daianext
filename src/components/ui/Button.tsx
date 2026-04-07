@@ -14,7 +14,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           'relative overflow-hidden inline-flex items-center justify-center rounded-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
           {
-            'bg-gradient-to-r from-[#0057B8] to-[#003865] hover:from-[#003865] hover:to-[#0057B8] text-white transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:ring-[#0057B8] group':
+            'bg-gradient-to-r from-[#0057B8] to-[#003865] hover:from-[#003865] hover:to-[#0057B8] text-white transform hover:scale-105 shadow-lg hover:shadow-xl focus-visible:ring-[#0057B8] group/btn':
               isPrimary,
             'bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-gray-500':
               variant === 'secondary',
@@ -38,7 +38,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {isPrimary ? (
           <>
             <span className="relative z-10 flex items-center gap-2">{children}</span>
-            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out pointer-events-none" />
+            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-out pointer-events-none" />
           </>
         ) : children}
       </button>

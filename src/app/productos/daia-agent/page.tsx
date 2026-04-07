@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Network, Bot, Activity, ScanLine, CheckCircle2 } from 'lucide-react'
+import { Network, Bot, Activity, ScanLine, CheckCircle2 } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import FeatureCard from '@/components/ui/FeatureCard'
 import BenefitCard from '@/components/ui/BenefitCard'
@@ -82,6 +82,12 @@ export default function DaiaAgentPage() {
       desc: 'Vista general con acceso a todos los módulos: Operador, Vaciado, Paletizaje, Etiquetado y Configuración.'
     },
     {
+      src: '/daiaagent/vaciado.png',
+      alt: 'Módulo de vaciado - Obtención de lotes y trazabilidad',
+      caption: 'Vaciado de Bins',
+      desc: 'Obtención de lotes desde el ERP, automatización de datos de trazabilidad y seguimiento del progreso de órdenes de trabajo.'
+    },
+    {
       src: '/daiaagent/operador_con_datos.png',
       alt: 'Panel del operador - Histórico de lotes, cajas y gráficos',
       caption: 'Panel del Operador',
@@ -92,6 +98,12 @@ export default function DaiaAgentPage() {
       alt: 'KPIs de producción - Total embalado, kilos por hora y por vía',
       caption: 'KPIs de Producción',
       desc: 'Métricas clave en tiempo real: total embalado, kilos HH, kilos por hora y kilos por vía activa.'
+    },
+    {
+      src: '/daiaagent/indicadoresoperador.png',
+      alt: 'Indicadores de operador en tiempo real',
+      caption: 'Indicadores de Operador',
+      desc: 'Panel de indicadores de rendimiento por turno: conteo de horas, alarmas y seguimiento en tiempo real.'
     },
     {
       src: '/daiaagent/etiquetado_seleccion.png',
@@ -131,15 +143,6 @@ export default function DaiaAgentPage() {
           <span>/</span>
           <span className="text-[#0057B8] font-medium">Daia Agent</span>
         </nav>
-
-        {/* Back button */}
-        <Link
-          href="/productos"
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#0057B8] transition-colors mb-10"
-        >
-          <ArrowLeft size={18} />
-          <span className="text-sm">Volver a productos</span>
-        </Link>
 
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -226,7 +229,7 @@ export default function DaiaAgentPage() {
         <section className="mb-16">
           <div className="bg-gradient-to-br from-[#0057B8] to-[#003865] rounded-2xl p-8 md:p-10">
             <span className="inline-block text-xs font-bold text-white/60 uppercase tracking-widest mb-3">Datos y reportes</span>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">¿Qué datos obtienes con Daia Agent?</h2>
+            <h2 className="text-2xl font-bold text-white mb-2">¿Qué datos obtienes con Daia Agent?</h2>
             <p className="text-blue-200 text-sm mb-8">Accede a información clave y crea reportes personalizados con acceso total a la base de datos.</p>
             <div className="grid md:grid-cols-3 gap-5">
               {dataPoints.map((point, index) => (
@@ -259,9 +262,9 @@ export default function DaiaAgentPage() {
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-[#0057B8] to-[#003865] rounded-2xl p-8 md:p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para conectar tu línea de producción?</h2>
+          <h2 className="text-3xl font-bold mb-4">¿Cuántos datos de tu Tomra se pierden hoy por ingreso manual?</h2>
           <p className="text-lg mb-8 opacity-80">
-            Integra tus equipos clasificadores con tu ERP y elimina los ingresos manuales con Daia Agent.
+            Daia Agent captura automáticamente cada dato de tu clasificador y lo envía al ERP. Sin errores, sin demoras, con trazabilidad total.
           </p>
           <Link href="/contacto?interes=daia-agent">
             <Button variant="white" size="lg">

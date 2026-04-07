@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Route, LayoutDashboard, BarChart2, Package, Plug } from 'lucide-react'
+import { Route, LayoutDashboard, BarChart2, Package, Plug, Cpu } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import FeatureCard from '@/components/ui/FeatureCard'
 import BenefitCard from '@/components/ui/BenefitCard'
@@ -86,15 +86,6 @@ export default function DaiaERPPage() {
           <span className="text-[#0057B8] font-medium">Daia ERP</span>
         </nav>
 
-        {/* Back button */}
-        <Link
-          href="/productos"
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#0057B8] transition-colors mb-10"
-        >
-          <ArrowLeft size={18} />
-          <span className="text-sm">Volver a productos</span>
-        </Link>
-
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
@@ -160,11 +151,40 @@ export default function DaiaERPPage() {
           </div>
         </section>
 
+        {/* Integrations Section */}
+        <section className="mb-16">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Conectividad</span>
+            <h2 className="text-2xl font-bold text-gray-900 mb-3">Integración con tu ecosistema</h2>
+            <p className="text-gray-500 text-sm mb-8">Daia ERP se conecta nativamente con los líderes del mercado frutícola. Sin adaptaciones costosas, sin pérdida de datos.</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              {[
+                { label: 'Tomra Sizer', category: 'Clasificador' },
+                { label: 'Aweta', category: 'Clasificador' },
+                { label: 'Unitec', category: 'Clasificador' },
+                { label: 'SAP Business One', category: 'ERP' },
+                { label: 'Softland', category: 'ERP' },
+                { label: 'Odoo', category: 'ERP' },
+                { label: 'HubCrop', category: 'Agrícola' },
+                { label: 'Zebra / Bixolon', category: 'Etiquetado' },
+              ].map((item, index) => (
+                <div key={index} className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition-all duration-150">
+                  <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Cpu className="text-[#0057B8]" size={16} />
+                  </div>
+                  <span className="block text-sm font-semibold text-gray-900">{item.label}</span>
+                  <span className="block text-xs text-gray-400 mt-0.5">{item.category}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-[#0057B8] to-[#003865] rounded-2xl p-8 md:p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para optimizar tu gestión frutícola?</h2>
+          <h2 className="text-3xl font-bold mb-4">Tu planta ya usa Tomra, SAP o Softland. Daia ERP se conecta con todos.</h2>
           <p className="text-lg mb-8 opacity-80">
-            Descubre cómo Daia ERP puede transformar tu operación y maximizar tu rentabilidad.
+            Trazabilidad completa desde la recepción hasta el despacho, integrada con el hardware y software que ya tienes.
           </p>
           <Link href="/contacto?interes=daia-erp">
             <Button variant="white" size="lg">
