@@ -107,12 +107,12 @@ export default function ClientesPage() {
         </div>
       </section>
 
-      {/* Partners */}
+      {/* Alianza tecnológica */}
       <section className="py-10 px-4">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-8">
             <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-4">
-              Partners tecnológicos
+              Alianza tecnológica
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
               Trabajamos junto a los mejores
