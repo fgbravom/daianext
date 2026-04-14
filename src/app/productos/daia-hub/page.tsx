@@ -42,7 +42,7 @@ export default function DaiaHubPage() {
     {
       icon: FileText,
       title: 'Gestión documental automática',
-      description: 'Genera y gestiona documentos de exportación — certificados, packing lists, BL — cumpliendo con normativas nacionales e internacionales.'
+      description: 'Genera y gestiona documentos de exportación (certificados, packing lists, BL) cumpliendo con normativas nacionales e internacionales.'
     }
   ]
 

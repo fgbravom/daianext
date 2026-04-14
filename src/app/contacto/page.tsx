@@ -316,7 +316,7 @@ function ContactoForm() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">¿Cuánto tiempo toma la implementación?</h4>
-                  <p className="text-gray-600 text-sm">El tiempo de implementación varía según el tamaño y complejidad de tu operación, típicamente entre 2-8 semanas.</p>
+                  <p className="text-gray-600 text-sm">Aproximadamente un mes: 1 día de instalación, 1 día de configuración base, 1 semana de ajustes por área (calidad, materiales, producción) y 1 semana de marcha blanca. Siempre implementamos antes de temporada: es la única forma de hacerlo bien.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">¿Proporcionan capacitación?</h4>

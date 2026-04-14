@@ -31,10 +31,10 @@ export default function EmpresaPage() {
         <div className="mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <p className="text-gray-700 text-lg leading-relaxed">
-              Nacimos dentro de la industria frutícola, no desde una oficina de desarrollo. <strong>Conocemos los tiempos de temporada</strong>, <strong>la presión del despacho</strong>, <strong>los requerimientos de exportación</strong> y lo que significa perder trazabilidad en medio de una línea de proceso.
+              Nacimos dentro de la industria frutícola, no desde una oficina de desarrollo. Conocemos los tiempos de temporada, la presión del despacho y lo que significa perder trazabilidad en medio de una línea de proceso.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Por esto cada herramienta que desarrollamos responde a <strong>problemas reales de plantas reales</strong>. No adaptamos software genérico, construimos desde la operación hacia arriba, para que el sistema se ajuste a tu trabajo y no al revés.
+              El soporte que hoy ofrecemos nació de haberlo necesitado y no encontrarlo: tickets de correo, técnicos que no entendían la urgencia, días perdidos con pallets listos para despachar. Construimos lo que nos habría resuelto el problema.
             </p>
           </div>
         </div>

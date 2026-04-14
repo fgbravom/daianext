@@ -20,10 +20,10 @@ export const products: Product[] = [
     name: 'Daia HUB',
     description: 'Plataforma que simplifica y optimiza cada aspecto de la exportación e importación de fruta.',
     features: [
-      'Centralización logística completa',
-      'Comunicación transparente entre equipos',
-      'Optimización financiera avanzada',
-      'Gestión documental automatizada'
+      'Embarques, documentos y liquidaciones en un solo lugar',
+      'Clientes y agentes informados automáticamente',
+      'Rentabilidad real por embarque, con detalle de costos',
+      'Packing lists, certificados y BL generados automáticamente'
     ],
     image: '/images/daia-hub.gif',
     demoUrl: 'https://hub.daia.cl'
@@ -35,7 +35,7 @@ export const products: Product[] = [
     features: [
       'Control de procesos de calidad',
       'Recepción, producto terminado, consolidación de despacho',
-      'Envio de reportes automatizado',
+      'Envío de reportes automatizado',
       'Dashboards de calidad en tiempo real'
     ],
     image: '/images/daia-calidad.png',
@@ -85,25 +85,25 @@ export const values: Value[] = [
   {
     id: 'simplicity',
     title: 'Simplicidad',
-    description: 'Cada producto está diseñado para maximizar la comodidad y facilidad de uso, mejorando la productividad.',
+    description: 'Solo el set de funcionalidades que necesita una planta de proceso de fruta fresca. Sin módulos que nunca usarás, sin licencias por función.',
     icon: Target
   },
   {
     id: 'responsibility',
     title: 'Responsabilidad',
-    description: 'Somos responsables en cada paso, ofreciendo soluciones fiables y duraderas que impulsen tu éxito.',
+    description: 'Soporte con opción 24/7 y SLA con garantías reales. Cuando la línea está parada en plena temporada, alguien responde, y ese alguien ya sabe lo que significa un despacho urgente.',
     icon: Shield
   },
   {
     id: 'transparency',
     title: 'Transparencia',
-    description: 'Utilizamos tecnología de punta para ofrecerte herramientas transparentes con datos precisos en tiempo real.',
+    description: 'Un solo precio. Una sola mensualidad para todo el sistema. Sin costos extras escondidos, sin sorpresas en la factura.',
     icon: Search
   },
   {
     id: 'efficiency',
     title: 'Eficiencia',
-    description: 'Conocemos los procesos productivos y sabemos qué información necesitas y cuándo la necesitas.',
+    description: 'Automatizado para reducir los ingresos manuales. Menos tipeo, menos errores, más atención en la operación que importa.',
     icon: Zap
   }
 ]

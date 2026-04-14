@@ -39,8 +39,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 mb-8 leading-relaxed"
             >
-              Conoce la historia detrás de nuestra empresa y cómo hemos
-              evolucionado.
+              Software construido desde adentro de la planta, no desde una oficina.
             </motion.p>
 
             <motion.div

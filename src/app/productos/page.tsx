@@ -42,8 +42,7 @@ export default function ProductosPage() {
             Nuestros Productos
           </h1>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
-            Soluciones tecnológicas diseñadas específicamente para la industria frutícola,
-            desde la producción hasta la exportación.
+            Cinco herramientas construidas para la operación frutícola: desde la línea de proceso hasta el despacho al exterior.
           </p>
         </div>
 
@@ -107,7 +106,7 @@ export default function ProductosPage() {
         <section className="bg-gradient-to-r from-[#0057B8] to-[#003865] rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">¿No estás seguro cuál elegir?</h2>
           <p className="text-lg mb-8 text-white/75">
-            Nuestro equipo puede ayudarte a encontrar la solución perfecta para tu operación.
+            Cuéntanos cómo opera tu planta y te decimos exactamente qué necesitas.
           </p>
           <div className="flex justify-center">
             <Link href="/contacto?interes=consultoria">

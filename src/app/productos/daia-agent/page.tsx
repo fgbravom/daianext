@@ -28,12 +28,12 @@ export default function DaiaAgentPage() {
     {
       icon: Network,
       title: 'Interoperabilidad total',
-      description: 'Conecta cualquier línea de empaquetado o calibración con tu ERP mediante APIs genéricas independientes, sin importar la marca o sistema.'
+      description: 'Conecta ERP, líneas de proceso y segregadores de caja de distintos proveedores en un solo flujo. La trazabilidad no se corta cuando cambia el sistema; sigue sin intervención del operador.'
     },
     {
       icon: Bot,
       title: 'Cero ingresos manuales',
-      description: 'Automatiza la captura de datos de trazabilidad — productor, variedad, huerto, turno — directamente desde la línea de producción.'
+      description: 'El operador deja de ser el puente entre sistemas. Daia Agent sincroniza la configuración automáticamente para que el equipo se concentre en operar, no en tipear.'
     },
     {
       icon: Activity,

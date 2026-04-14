@@ -22,17 +22,17 @@ export default function ClientesPage() {
     {
       icon: TrendingDown,
       title: 'Menos Errores',
-      description: 'Reducción significativa en errores de inventario y trazabilidad a lo largo de toda la cadena productiva.',
+      description: 'Sin ingreso manual de datos, los errores de inventario y trazabilidad desaparecen en la fuente. La información llega directamente desde la línea al sistema.',
     },
     {
       icon: Zap,
       title: 'Mayor Velocidad',
-      description: 'Procesos más ágiles desde recepción hasta exportación, sin ingreso manual de datos.',
+      description: 'Recepción, proceso y despacho sin papel, sin re-tipeo, sin esperar que alguien consolide datos al final del turno.',
     },
     {
       icon: TrendingUp,
       title: 'Mejor Control',
-      description: 'Visibilidad completa y toma de decisiones en tiempo real con datos siempre disponibles.',
+      description: 'Cada lote, cada bin, cada caja tiene su historial. En una auditoría, en un reclamo o en una reunión, la información está ahí.',
     },
   ]
 
