@@ -14,7 +14,16 @@
       "Bash(git add:*)",
       "Bash(npx tsc:*)",
       "WebFetch(domain:daia2.vercel.app)",
-      "Bash(ls \"c:/Users/Pipe/Proyectos/Daia Systems/daianext/\"*.md)"
+      "Bash(ls \"c:/Users/Pipe/Proyectos/Daia Systems/daianext/\"*.md)",
+      "Bash(git push origin Repositiorios)",
+      "Bash(node -e \"const m = require\\(''c:/Users/Pipe/Proyectos/Daia Systems/daianext/.next/routes-manifest.json''\\); console.log\\(''dataRoutes:'', m.dataRoutes\\);\")",
+      "Bash(npx next:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \":*)",
+      "Bash(xargs grep:*)",
+      "WebFetch(domain:daia-grower-dev.vercel.app)",
+      "Bash(node -e \"const l = require\\(''lucide-react''\\); const icons = [''Route'',''LayoutDashboard'',''BarChart2'',''Package'',''Plug'',''Ship'',''Bell'',''TrendingUp'',''FileText'',''ShieldCheck'',''ShieldAlert'',''Zap'',''Award'',''Network'',''Bot'',''Activity'',''ScanLine'',''Landmark'',''Building2'',''CheckCircle2'',''TrendingDown'']; icons.forEach\\(i => console.log\\(i, !!l[i]\\)\\)\")",
+      "Bash(node -e \"const l = require\\(''lucide-react''\\); const icons = [''Route'',''LayoutDashboard'',''BarChart2'',''Package'',''Plug'',''Ship'',''Bell'',''TrendingUp'',''FileText'',''ShieldCheck'',''ShieldAlert'',''Zap'',''Award'',''Network'',''Bot'',''Activity'',''ScanLine'',''Landmark'',''Building2'',''CheckCircle2'',''TrendingDown'']; icons.forEach\\(i => console.log\\(i + '' '' + \\(l[i] ? ''true'' : ''false''\\)\\)\\)\")"
     ],
     "deny": [],
     "ask": []
