@@ -118,16 +118,24 @@ export default function ClientesPage() {
               Trabajamos junto a los mejores
             </h2>
           </div>
-          <div className="flex justify-center">
-            <div className="bg-white rounded-xl p-6 h-32 w-48 flex items-center justify-center border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200">
-              <Image
-                src="/clientes/logo-tomra.avif"
-                alt="Tomra logo"
-                width={120}
-                height={72}
-                className="max-h-16 max-w-28 object-contain"
-              />
-            </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { src: '/clientes/logo-tomra.avif', alt: 'Tomra' },
+              { src: '/clientes/logo-aweta-white.svg', alt: 'Aweta' },
+              { src: '/clientes/maf-roda-agrobotic.svg', alt: 'MAF Roda Agrobotic' },
+              { src: '/clientes/unitec-logo.jpg', alt: 'Unitec' },
+              { src: '/clientes/LOGO IPLA LATAM Oscuro(2).png', alt: 'IPLA Latam' },
+            ].map(({ src, alt }) => (
+              <div key={alt} className="bg-white rounded-xl p-6 h-32 w-48 flex items-center justify-center border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={120}
+                  height={72}
+                  className="max-h-16 max-w-28 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
