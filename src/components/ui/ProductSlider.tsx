@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight, X, Expand } from 'lucide-react'
 
@@ -13,7 +13,7 @@ interface Slide {
 
 export default function ProductSlider({ slides }: { slides: Slide[] }) {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [lightbox, setLightbox] = useState<Slide | null>(null)
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
 
   const scrollToIndex = (index: number) => {
@@ -40,6 +40,22 @@ export default function ProductSlider({ slides }: { slides: Slide[] }) {
     })
     setActiveIndex(closest)
   }, [])
+
+  const lightboxPrev = () => setLightboxIndex(i => i !== null ? Math.max(0, i - 1) : i)
+  const lightboxNext = () => setLightboxIndex(i => i !== null ? Math.min(slides.length - 1, i + 1) : i)
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') lightboxPrev()
+      if (e.key === 'ArrowRight') lightboxNext()
+      if (e.key === 'Escape') setLightboxIndex(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightboxIndex])
+
+  const lightboxSlide = lightboxIndex !== null ? slides[lightboxIndex] : null
 
   return (
     <>
@@ -73,7 +89,7 @@ export default function ProductSlider({ slides }: { slides: Slide[] }) {
             <button
               key={index}
               data-slide-item
-              onClick={() => setLightbox(slide)}
+              onClick={() => setLightboxIndex(index)}
               className="group flex-shrink-0 w-[82%] md:w-[47%] lg:w-[31%] snap-start text-left"
               aria-label={`Ver ${slide.caption}`}
             >
@@ -116,29 +132,50 @@ export default function ProductSlider({ slides }: { slides: Slide[] }) {
       </div>
 
       {/* Lightbox */}
-      {lightbox && (
+      {lightboxSlide && lightboxIndex !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/92 p-4 backdrop-blur-sm"
-          onClick={() => setLightbox(null)}
+          onClick={() => setLightboxIndex(null)}
         >
           <div className="relative max-w-6xl w-full" onClick={e => e.stopPropagation()}>
+            {/* Close */}
             <button
-              onClick={() => setLightbox(null)}
+              onClick={() => setLightboxIndex(null)}
               className="absolute -top-12 right-0 w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               aria-label="Cerrar"
             >
               <X size={20} />
             </button>
+
+            {/* Prev */}
+            <button
+              onClick={lightboxPrev}
+              className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors ${lightboxIndex === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+              aria-label="Imagen anterior"
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            {/* Next */}
+            <button
+              onClick={lightboxNext}
+              className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/25 transition-colors ${lightboxIndex === slides.length - 1 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+              aria-label="Imagen siguiente"
+            >
+              <ChevronRight size={24} />
+            </button>
+
             <Image
-              src={lightbox.src}
-              alt={lightbox.alt}
+              src={lightboxSlide.src}
+              alt={lightboxSlide.alt}
               width={1400}
               height={900}
               className="w-full h-auto rounded-xl shadow-2xl"
             />
             <div className="mt-4 text-center">
-              <p className="text-white font-semibold text-lg">{lightbox.caption}</p>
-              {lightbox.desc && <p className="text-gray-400 text-sm mt-1 max-w-2xl mx-auto">{lightbox.desc}</p>}
+              <p className="text-white font-semibold text-lg">{lightboxSlide.caption}</p>
+              {lightboxSlide.desc && <p className="text-gray-400 text-sm mt-1 max-w-2xl mx-auto">{lightboxSlide.desc}</p>}
+              <p className="text-gray-600 text-xs mt-2">{lightboxIndex + 1} / {slides.length}</p>
             </div>
           </div>
         </div>

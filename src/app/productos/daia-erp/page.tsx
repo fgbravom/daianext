@@ -54,22 +54,34 @@ export default function DaiaERPPage() {
 
   const slides = [
     {
-      src: '/daiaerp.png',
-      alt: 'Daia ERP - Vista general del sistema',
-      caption: 'Vista General',
+      src: '/daiaerp/DaiaERPinicio.png',
+      alt: 'Daia ERP - Pantalla de inicio',
+      caption: 'Pantalla de Inicio',
       desc: 'Acceso unificado a todos los módulos del sistema desde el menú principal.'
     },
     {
-      src: '/daiareactui.png',
-      alt: 'Daia ERP - Módulo de gestión',
-      caption: 'Módulo de Gestión',
-      desc: 'Interfaz moderna para el control de operaciones de planta en tiempo real.'
+      src: '/daiaerp/ordendeproceso.png',
+      alt: 'Daia ERP - Orden de proceso',
+      caption: 'Orden de Proceso',
+      desc: 'Gestión completa de órdenes de proceso para el control de operaciones de planta.'
     },
     {
-      src: '/daiareactui1.png',
-      alt: 'Daia ERP - Dashboard de indicadores',
-      caption: 'Dashboard de Indicadores',
-      desc: 'Panel de indicadores clave con datos actualizados para la toma de decisiones.'
+      src: '/daiaerp/ordendecompra.png',
+      alt: 'Daia ERP - Orden de compra',
+      caption: 'Orden de Compra',
+      desc: 'Administración de órdenes de compra integrada al flujo de abastecimiento.'
+    },
+    {
+      src: '/daiaerp/RolesUsuarios.png',
+      alt: 'Daia ERP - Roles y usuarios',
+      caption: 'Roles y Usuarios',
+      desc: 'Control de acceso por roles para una gestión segura y ordenada del sistema.'
+    },
+    {
+      src: '/daiaerp/diseñadoretiquetas.png',
+      alt: 'Daia ERP - Diseñador de etiquetas',
+      caption: 'Diseñador de Etiquetas',
+      desc: 'Herramienta integrada para crear y personalizar etiquetas de exportación.'
     },
   ]
 

@@ -5,6 +5,7 @@ import { Ship, Bell, TrendingUp, FileText, BarChart2, Landmark, Truck, Globe } f
 import Button from '@/components/ui/Button'
 import FeatureCard from '@/components/ui/FeatureCard'
 import BenefitCard from '@/components/ui/BenefitCard'
+import ProductSlider from '@/components/ui/ProductSlider'
 
 export const metadata: Metadata = {
   title: 'Daia HUB - Plataforma de exportación e importación | Daia Systems',
@@ -196,6 +197,23 @@ export default function DaiaHubPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Gallery Slider */}
+        <section className="mb-16">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
+            <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-3">Vista del sistema</span>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Capturas del sistema</h2>
+            <p className="text-sm text-gray-500 mb-7">Haz clic en <span className="text-[#0057B8]">cualquier imagen</span> para verla a tamaño completo.</p>
+            <ProductSlider slides={[
+              { src: '/hub/login.png', alt: 'Daia HUB - Login', caption: 'Acceso al sistema', desc: 'Ingreso seguro a la plataforma con credenciales diferenciadas por rol y empresa.' },
+              { src: '/hub/home.png', alt: 'Daia HUB - Home', caption: 'Panel principal', desc: 'Vista general con resumen de embarques activos, alertas y métricas clave de la operación.' },
+              { src: '/hub/DocumentosHome.png', alt: 'Daia HUB - Documentos Home', caption: 'Dashboard de documentos', desc: 'Vista informativa del estado de toda la documentación asociada a los embarques.' },
+              { src: '/hub/reservaciones.png', alt: 'Daia HUB - Reservaciones', caption: 'Reservaciones', desc: 'Gestión de reservas de espacio en contenedores y coordinación con navieras.' },
+              { src: '/hub/documentacion.png', alt: 'Daia HUB - Documentación', caption: 'Gestión documental', desc: 'Centralización y administración de documentos de exportación: packing list, certificados, BL y más.' },
+              { src: '/hub/recursos.png', alt: 'Daia HUB - Recursos', caption: 'Recursos', desc: 'Administración de recursos logísticos y coordinación de equipos operativos.' },
+            ]} />
           </div>
         </section>
 
