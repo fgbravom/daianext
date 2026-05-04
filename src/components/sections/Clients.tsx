@@ -60,15 +60,6 @@ export default function Clients() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600">
-            ¿Quieres ser parte de nuestros casos de éxito?{' '}
-            <a
-              href="/contacto"
-              className="text-[#0057B8] hover:text-[#003865] font-medium underline"
-            >
-              Contáctanos
-            </a>
-          </p>
         </motion.div>
       </div>
     </section>

@@ -10,7 +10,7 @@ const partners = [
 
 export default function TechPartners() {
   return (
-    <section className="py-10 px-4">
+    <section className="py-10 pb-20 px-4">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-8">
           <span className="inline-block text-xs font-bold text-[#0057B8] uppercase tracking-widest mb-4">
